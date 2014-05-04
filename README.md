@@ -1,5 +1,5 @@
-Algorithmn-Practice-LinkedList
+Algorithm-Practice-LinkedList
 =============================
 
-This is for my algoritmn practice.
+This is for my algoritm practice.
 
