@@ -13,6 +13,7 @@ public:
 	~LinkedList(void);
 	void print(void);
 	void add(int value);
+	bool del(int value);
 private:
 	Node *head;
 	Node *last;
@@ -49,9 +50,38 @@ void LinkedList::add(int value) {
 	}	
 }
 
+bool LinkedList::del(int value) {
+	bool found = false;
+	Node *current = head;
+	Node *prev = NULL;
+	while (current != NULL) {
+		if (current->value == value) {
+			found = true;
+			if (prev == NULL) {
+				head = current->next;
+			} else {
+				prev->next = current->next;
+			}
+		}
+		prev = current;
+		current = current->next;
+	}
+	return found;
+}
 int main(void) {
 	LinkedList list;
 	list.add(1);
 	list.add(2);
+	list.add(3);
+	list.add(5);
+	list.print();
+
+	cout << list.del(1) << endl;
+	list.print();
+
+	cout << list.del(3) << endl;
+	list.print();
+
+	cout << list.del(5) << endl;
 	list.print();
 }
