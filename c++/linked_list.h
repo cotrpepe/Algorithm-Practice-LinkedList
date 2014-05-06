@@ -1,6 +1,26 @@
+#ifndef __LINKED_LIST_H__
+#define __LINKED_LIST_H__
+
+#include <iostream>
+
+using namespace std;
+
 struct Node {
-	int data;
+	int value;
 	Node *next;
 };
 
+class LinkedList {
+public:
+	LinkedList(void);
+	~LinkedList(void);
+	void print(void);
+	void add(int value);
+	bool del(int value);
+private:
+	Node *head;
+	Node *last;
+};
+
+#endif // __LINKED_LIST_H__
 
