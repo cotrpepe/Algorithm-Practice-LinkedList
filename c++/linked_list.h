@@ -5,11 +5,6 @@
 
 using namespace std;
 
-struct Node {
-	int value;
-	Node *next;
-};
-
 class LinkedList {
 public:
 	LinkedList(void);
@@ -17,7 +12,13 @@ public:
 	void print(void);
 	void add(int value);
 	bool del(int value);
+
 private:
+	struct Node {
+		int value;
+		Node *next;
+	};
+
 	Node *head;
 	Node *last;
 };
