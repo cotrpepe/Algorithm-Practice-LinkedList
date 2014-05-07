@@ -17,7 +17,7 @@ public:
 		}
 	}
 
-	void print(void) {
+	void print(void) const {
 		for (Node *n = head; n != NULL; n = n->next) {
 			cout << n->value;
 			if (n->next != NULL) cout << " ";
@@ -25,7 +25,7 @@ public:
 		cout << endl;
 	}
 
-	void add(T value) {
+	void add(const T value) {
 		Node *n = new Node;
 		n->value = value;
 		n->next = NULL;
@@ -38,7 +38,7 @@ public:
 		}	
 	}
 
-	bool del(T value) {
+	bool del(const T value) {
 		bool found = false;
 		Node *current = head;
 		Node *prev = NULL;
