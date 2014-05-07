@@ -2,5 +2,5 @@ language: cpp
 compiler:
         - gcc
         - clang
-script mv ./c++ && make
+script: mv ./c++ && make
 
