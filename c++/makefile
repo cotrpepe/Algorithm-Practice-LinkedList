@@ -1,7 +1,7 @@
 CXX = g++
 TARGET = linked_list
 CXXFLAGS = -Wall
-SRCS = main.cpp
+SRCS = test.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 $(TARGET): $(OBJS)
