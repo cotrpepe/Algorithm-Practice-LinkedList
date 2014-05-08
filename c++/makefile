@@ -8,5 +8,5 @@ $(TARGET): $(OBJS)
 	$(CXX) -o $@ $(OBJS)
 
 clean:
-	rm -f $(TARGET) $(OBJS) *~ *.exe
+	rm -f $(TARGET) $(OBJS) *~ 
 
