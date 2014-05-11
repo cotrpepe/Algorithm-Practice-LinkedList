@@ -17,12 +17,13 @@ public:
 		}
 	}
 
-	void print(void) const {
+	string str(void) {
+		string ret = "";
 		for (Node *n = head; n != NULL; n = n->next) {
-			cout << n->value;
-			if (n->next != NULL) cout << " ";
+			ret += n->value;
+			if (n->next != NULL) ret += " ";
 		}
-		cout << endl;
+		return ret;
 	}
 
 	void add(const T value) {
