@@ -17,15 +17,6 @@ public:
 		}
 	}
 
-	string str(void) {
-		string ret = "";
-		for (Node *n = head; n != NULL; n = n->next) {
-			ret += n->value;
-			if (n->next != NULL) ret += " ";
-		}
-		return ret;
-	}
-
 	void add(const T value) {
 		Node *n = new Node;
 		n->value = value;

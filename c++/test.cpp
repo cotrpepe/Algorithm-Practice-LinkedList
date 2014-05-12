@@ -2,15 +2,6 @@
 #include <string>
 #include "linked_list.h"
 
-TEST(LinkedList, str) {
-	LinkedList<int> list;
-	list.add(1);
-	list.add(2);
-	list.add(3);
-
-	//ASSERT_EQ("1 2 3", list.str());
-}
-
 TEST(LinkedList, add_and_del) {
         LinkedList<int> list;
         list.add(1);
