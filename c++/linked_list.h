@@ -4,11 +4,12 @@
 template <typename T>
 class LinkedList {
 public:
-	LinkedList(void) : head(NULL), last(NULL) {}
+	LinkedList(void) : head(NULL), last(NULL), m_size(0) {}
 	~LinkedList(void); 
 	void add(const T value); 
 	bool del(const T value);
 	bool empty(void) const;
+	int size(void) const;
 
 private:
 	struct Node {
@@ -18,6 +19,7 @@ private:
 
 	Node *head;
 	Node *last;
+	int m_size;
 };
 
 template <typename T>
@@ -40,7 +42,8 @@ void LinkedList<T>::add(const T value) {
 	} else {
 		last->next = n;
 		last = n;
-	}	
+	}
+	m_size++;
 }
 
 template <typename T>
@@ -51,6 +54,7 @@ bool LinkedList<T>::del(const T value) {
 	while (current != NULL) {
 		if (current->value == value) {
 			found = true;
+			m_size--;
 			if (prev == NULL) {
 				head = current->next;
 			} else {
@@ -66,6 +70,11 @@ bool LinkedList<T>::del(const T value) {
 template <typename T>
 bool LinkedList<T>::empty(void) const {
 	return head == NULL;
+}
+
+template <typename T>
+int LinkedList<T>::size(void) const {
+	return m_size;
 }
 
 #endif // __LINKED_LIST_H__
