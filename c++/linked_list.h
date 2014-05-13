@@ -8,6 +8,7 @@ public:
 	~LinkedList(void); 
 	void add(const T value); 
 	bool del(const T value);
+	bool empty(void) const;
 
 private:
 	struct Node {
@@ -60,6 +61,11 @@ bool LinkedList<T>::del(const T value) {
 		current = current->next;
 	}
 	return found;
+}
+
+template <typename T>
+bool LinkedList<T>::empty(void) const {
+	return head == NULL;
 }
 
 #endif // __LINKED_LIST_H__
