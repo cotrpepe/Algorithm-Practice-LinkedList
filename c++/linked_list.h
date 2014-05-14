@@ -6,8 +6,8 @@ class LinkedList {
 public:
 	LinkedList(void) : m_head(NULL), m_last(NULL), m_size(0) {}
 	virtual ~LinkedList(void); 
-	void add(const T value); 
-	bool del(const T value);
+	void add(const T& value); 
+	bool del(const T& value);
 	bool empty(void) const;
 	int size(void) const;
 
@@ -32,7 +32,7 @@ LinkedList<T>::~LinkedList(void) {
 }
 
 template <typename T>
-void LinkedList<T>::add(const T value) {
+void LinkedList<T>::add(const T& value) {
 	Node *n = new Node;
 	n->value = value;
 	n->next = NULL;
@@ -47,7 +47,7 @@ void LinkedList<T>::add(const T value) {
 }
 
 template <typename T>
-bool LinkedList<T>::del(const T value) {
+bool LinkedList<T>::del(const T& value) {
 	bool found = false;
 	Node *current = m_head;
 	Node *prev = NULL;
