@@ -4,7 +4,7 @@
 template <typename T>
 class LinkedList {
 public:
-	LinkedList(void) : head(NULL), last(NULL), m_size(0) {}
+	LinkedList(void) : m_head(NULL), m_last(NULL), m_size(0) {}
 	~LinkedList(void); 
 	void add(const T value); 
 	bool del(const T value);
@@ -17,14 +17,14 @@ private:
 		Node *next;
 	};
 
-	Node *head;
-	Node *last;
+	Node *m_head;
+	Node *m_last;
 	int m_size;
 };
 
 template <typename T>
 LinkedList<T>::~LinkedList(void) {
-	for (Node *n = head; n != NULL;) {
+	for (Node *n = m_head; n != NULL;) {
 		Node *remove_node = n;
 		n = n->next;
 		delete remove_node;
@@ -36,12 +36,12 @@ void LinkedList<T>::add(const T value) {
 	Node *n = new Node;
 	n->value = value;
 	n->next = NULL;
-	if (head == NULL) {
-		head = n;
-		last = n;
+	if (m_head == NULL) {
+		m_head = n;
+		m_last = n;
 	} else {
-		last->next = n;
-		last = n;
+		m_last->next = n;
+		m_last = n;
 	}
 	m_size++;
 }
@@ -49,14 +49,14 @@ void LinkedList<T>::add(const T value) {
 template <typename T>
 bool LinkedList<T>::del(const T value) {
 	bool found = false;
-	Node *current = head;
+	Node *current = m_head;
 	Node *prev = NULL;
 	while (current != NULL) {
 		if (current->value == value) {
 			found = true;
 			m_size--;
 			if (prev == NULL) {
-				head = current->next;
+				m_head = current->next;
 			} else {
 				prev->next = current->next;
 			}
@@ -69,7 +69,7 @@ bool LinkedList<T>::del(const T value) {
 
 template <typename T>
 bool LinkedList<T>::empty(void) const {
-	return head == NULL;
+	return m_head == NULL;
 }
 
 template <typename T>
