@@ -9,13 +9,6 @@ TEST(LinkedList, empty_int) {
 	ASSERT_FALSE(list.empty());
 }
 
-TEST(LinkedList, empty_double) {
-	LinkedList<double> list;
-	ASSERT_TRUE(list.empty());
-	list.add(1.234);
-	ASSERT_FALSE(list.empty());
-}
-
 TEST(LinkedList, empty_string) {
 	LinkedList<std::string> list;
 	ASSERT_TRUE(list.empty());
