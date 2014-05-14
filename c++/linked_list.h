@@ -36,7 +36,7 @@ void LinkedList<T>::add(const T value) {
 	Node *n = new Node;
 	n->value = value;
 	n->next = NULL;
-	if (m_head == NULL) {
+	if (this->empty()) {
 		m_head = n;
 		m_last = n;
 	} else {
