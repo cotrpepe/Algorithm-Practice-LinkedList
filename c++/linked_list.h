@@ -5,7 +5,7 @@ template <typename T>
 class LinkedList {
 public:
 	LinkedList(void) : m_head(NULL), m_last(NULL), m_size(0) {}
-	~LinkedList(void); 
+	virtual ~LinkedList(void); 
 	void add(const T value); 
 	bool del(const T value);
 	bool empty(void) const;
