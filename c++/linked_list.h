@@ -1,11 +1,13 @@
 #ifndef __LINKED_LIST_H__
 #define __LINKED_LIST_H__
 
+#include <memory>
+
 template <typename T>
 class LinkedList {
 public:
 	LinkedList(void) : m_head(NULL), m_last(NULL), m_size(0) {}
-	virtual ~LinkedList(void); 
+	virtual ~LinkedList(void) {}; 
 	void add(const T& value); 
 	bool del(const T& value);
 	bool empty(void) const;
@@ -14,34 +16,25 @@ public:
 private:
 	struct Node {
 		T value;
-		Node *next;
+		std::shared_ptr<Node> next;
 	};
 
-	Node *m_head;
-	Node *m_last;
+	std::shared_ptr<Node> m_head;
+	std::shared_ptr<Node> m_last;
 	int m_size;
 };
 
 template <typename T>
-LinkedList<T>::~LinkedList(void) {
-	for (Node *n = m_head; n != NULL;) {
-		Node *remove_node = n;
-		n = n->next;
-		delete remove_node;
-	}
-}
-
-template <typename T>
 void LinkedList<T>::add(const T& value) {
-	Node *n = new Node;
+	std::shared_ptr<Node> n(new Node);
 	n->value = value;
 	n->next = NULL;
 	if (this->empty()) {
-		m_head = n;
-		m_last = n;
+		m_head = std::move(n);
+		m_last = std::move(n);
 	} else {
-		m_last->next = n;
-		m_last = n;
+		m_last->next = std::move(n);
+		m_last = std::move(n);
 	}
 	m_size++;
 }
@@ -49,8 +42,8 @@ void LinkedList<T>::add(const T& value) {
 template <typename T>
 bool LinkedList<T>::del(const T& value) {
 	bool found = false;
-	Node *current = m_head;
-	Node *prev = NULL;
+	std::shared_ptr<Node> current = m_head;
+	std::shared_ptr<Node> prev = NULL;
 	while (current != NULL) {
 		if (current->value == value) {
 			found = true;
