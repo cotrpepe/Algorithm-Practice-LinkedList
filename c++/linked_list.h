@@ -6,7 +6,7 @@
 template <typename T>
 class LinkedList {
 public:
-	LinkedList(void) : m_head(NULL), m_last(NULL), m_size(0) {}
+	LinkedList(void) : m_head(nullptr), m_last(nullptr), m_size(0) {}
 	virtual ~LinkedList(void) {}; 
 	void add(const T& value); 
 	bool del(const T& value);
@@ -28,7 +28,7 @@ template <typename T>
 void LinkedList<T>::add(const T& value) {
 	std::shared_ptr<Node> n(new Node);
 	n->value = value;
-	n->next = NULL;
+	n->next = nullptr;
 	if (this->empty()) {
 		m_head = std::move(n);
 		m_last = std::move(n);
@@ -43,12 +43,12 @@ template <typename T>
 bool LinkedList<T>::del(const T& value) {
 	bool found = false;
 	std::shared_ptr<Node> current = m_head;
-	std::shared_ptr<Node> prev = NULL;
-	while (current != NULL) {
+	std::shared_ptr<Node> prev = nullptr;
+	while (current != nullptr) {
 		if (current->value == value) {
 			found = true;
 			m_size--;
-			if (prev == NULL) {
+			if (prev == nullptr) {
 				m_head = current->next;
 			} else {
 				prev->next = current->next;
@@ -62,7 +62,7 @@ bool LinkedList<T>::del(const T& value) {
 
 template <typename T>
 bool LinkedList<T>::empty(void) const {
-	return m_head == NULL;
+	return m_head == nullptr;
 }
 
 template <typename T>
