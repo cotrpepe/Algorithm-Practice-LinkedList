@@ -1,6 +1,6 @@
 CXX = g++
 TARGET = test 
-CXXFLAGS = -Wall -Wnon-virtual-dtor -Woverloaded-virtual -std=c++0x
+CXXFLAGS = -g -Wall -Wnon-virtual-dtor -Woverloaded-virtual -std=c++0x
 SRCS = test.cpp
 OBJS = $(SRCS:.cpp=.o)
 
