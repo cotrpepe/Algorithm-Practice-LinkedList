@@ -30,11 +30,11 @@ void LinkedList<T>::add(const T& value) {
 	n->value = value;
 	n->next = nullptr;
 	if (this->empty()) {
-		m_head = std::move(n);
-		m_last = std::move(n);
+		m_head = n;
+		m_last = n;
 	} else {
-		m_last->next = std::move(n);
-		m_last = std::move(n);
+		m_last->next = n;
+		m_last = n;
 	}
 	m_size++;
 }
