@@ -7,7 +7,8 @@ template <typename T>
 class LinkedList {
 public:
 	LinkedList(void) : m_head(nullptr), m_last(nullptr), m_size(0) {}
-	virtual ~LinkedList(void) {}; 
+	virtual ~LinkedList(void); 
+	
 	void add(const T& value); 
 	bool del(const T& value);
 	bool empty(void) const;
@@ -18,11 +19,14 @@ private:
 		T value;
 		std::shared_ptr<Node> next;
 	};
-
+	
 	std::shared_ptr<Node> m_head;
 	std::shared_ptr<Node> m_last;
 	int m_size;
 };
+
+template <typename T>
+LinkedList<T>::~LinkedList(void) = default;
 
 template <typename T>
 void LinkedList<T>::add(const T& value) {
