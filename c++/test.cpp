@@ -5,6 +5,7 @@
 TEST(LinkedList, empty_int) {
 	LinkedList<int> list;
 	ASSERT_TRUE(list.empty());
+
 	list.add(1);
 	ASSERT_FALSE(list.empty());
 }
@@ -12,6 +13,7 @@ TEST(LinkedList, empty_int) {
 TEST(LinkedList, empty_string) {
 	LinkedList<std::string> list;
 	ASSERT_TRUE(list.empty());
+
 	list.add("test");
 	ASSERT_FALSE(list.empty());
 }
