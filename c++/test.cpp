@@ -50,18 +50,6 @@ TEST(LinkedList, size_string) {
 	ASSERT_EQ(0, list.size());
 }
 
-TEST(LinkedList, add_and_del) {
-        LinkedList<int> list;
-        list.add(1);
-	list.add(2);
-	list.add(3);
-	ASSERT_FALSE(list.del(0));
-	ASSERT_TRUE(list.del(1));
-	ASSERT_TRUE(list.del(3));
-	ASSERT_TRUE(list.del(2));
-	ASSERT_FALSE(list.del(2));
-}
-
 int main(int argc, char **argv) {
 	::testing::InitGoogleTest(&argc, argv);
 	return RUN_ALL_TESTS();

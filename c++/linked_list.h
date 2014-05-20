@@ -2,6 +2,7 @@
 #define __LINKED_LIST_H__
 
 #include <memory>
+#include <stdexcept>
 
 template <typename T>
 class LinkedList {
@@ -10,7 +11,7 @@ public:
 	virtual ~LinkedList(void); 
 	
 	void add(const T& value); 
-	bool del(const T& value);
+	void del(const T& value);
 	bool empty(void) const;
 	int size(void) const;
 
@@ -44,7 +45,7 @@ void LinkedList<T>::add(const T& value) {
 }
 
 template <typename T>
-bool LinkedList<T>::del(const T& value) {
+void LinkedList<T>::del(const T& value) {
 	bool found = false;
 	std::shared_ptr<Node> current = m_head;
 	std::shared_ptr<Node> prev = nullptr;
@@ -61,7 +62,9 @@ bool LinkedList<T>::del(const T& value) {
 		prev = current;
 		current = current->next;
 	}
-	return found;
+
+	if (found == false)
+		throw std::runtime_error("An element to delete can't be found.");
 }
 
 template <typename T>
