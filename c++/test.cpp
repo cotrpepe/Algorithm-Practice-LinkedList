@@ -53,7 +53,7 @@ TEST(LinkedList, size_string) {
 	ASSERT_EQ(0, list->size());
 }
 
-TEST(LinkedList, del_int) {
+TEST(LinkedList, add_del_int) {
 	std::unique_ptr<LinkedList<int>> list(new LinkedList<int>());
 	ASSERT_THROW(list->del(1), std::runtime_error);
 
@@ -71,7 +71,7 @@ TEST(LinkedList, del_int) {
 	ASSERT_THROW(list->del(2), std::runtime_error);
 }
 
-TEST(LinkedList, del_string) {
+TEST(LinkedList, add_del_string) {
 	std::unique_ptr<LinkedList<std::string>> list(new LinkedList<std::string>());
 	ASSERT_THROW(list->del("aaa"), std::runtime_error);
 
