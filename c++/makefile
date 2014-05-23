@@ -1,4 +1,6 @@
-CXX = g++
+ifndef CXX
+	CXX = g++
+endif
 TARGET = test 
 CXXFLAGS = -g -Wall -Wnon-virtual-dtor -Woverloaded-virtual -std=c++0x
 SRCS = test.cpp
