@@ -11,5 +11,4 @@ script:
         - cd ./c++
         - make
         - ./test
-        - cppcheck --enable=all ./
 

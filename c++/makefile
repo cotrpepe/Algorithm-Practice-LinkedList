@@ -8,6 +8,7 @@ OBJS = $(SRCS:.cpp=.o)
 
 $(TARGET): $(OBJS)
 	$(CXX) -o $@ $(OBJS) -lgtest -lpthread
+	cppcheck --enable=all ./
 
 clean:
 	rm -f $(TARGET) $(OBJS) *~
