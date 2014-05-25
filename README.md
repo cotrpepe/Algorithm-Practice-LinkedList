@@ -8,9 +8,10 @@ This is for my algorithm practice.
 # Dependencies
 
 Google Test
-
+cppcheck
 
 # How to build
 
 make
-./test
+./test:w
+
