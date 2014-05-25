@@ -5,7 +5,12 @@ Algorithm-Practice-LinkedList
 
 This is for my algorithm practice.
 
-# What's Linked List?
+# Dependencies
 
-# Complexity
+Google Test
 
+
+# How to build
+
+make
+./test
