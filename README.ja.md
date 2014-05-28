@@ -1,15 +1,15 @@
-ƒŠƒ“ƒNƒŠƒXƒgiC++j
+ï¿½ï¿½ï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½Xï¿½gï¿½iC++ï¿½j
 =============================
-[![Build Status](https://travis-ci.org/cotrpepe/Algorithm-Practice-LinkedList.svg?branch=master)](https://travis-ci.org/cotrpepe/Algorithm-Practice-LinkedList)
+[![Build Status](https://travis-ci.org/cotrpepe/practice-cpp-linkedlist.svg?branch=master)](https://travis-ci.org/cotrpepe/practice-cpp-linkedlist)
 
-‚±‚ê‚Í©Šw—p‚ÌƒvƒƒWƒFƒNƒg‚Å‚·B
+ï¿½ï¿½ï¿½ï¿½ï¿½Íï¿½ï¿½wï¿½pï¿½Ìƒvï¿½ï¿½ï¿½Wï¿½Fï¿½Nï¿½gï¿½Å‚ï¿½ï¿½B
 
-## ƒrƒ‹ƒh•û–@
+## ï¿½rï¿½ï¿½ï¿½hï¿½ï¿½ï¿½@
 
 1. $ make
 2. $ ./test
 
-## ƒrƒ‹ƒh‚É•K—v‚È‚à‚Ì
+## ï¿½rï¿½ï¿½ï¿½hï¿½É•Kï¿½vï¿½È‚ï¿½ï¿½ï¿½
 
 1. Google Test (https://code.google.com/p/googletest/)
 2. Cppcheck (http://cppcheck.sourceforge.net/)
