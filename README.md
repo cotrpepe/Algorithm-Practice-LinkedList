@@ -11,5 +11,5 @@ This project is for my study.
 
 ## Dependencies
 
-Google Test (https://code.google.com/p/googletest/)
-Cppcheck (http://cppcheck.sourceforge.net/)
+1. Google Test (https://code.google.com/p/googletest/)
+2. Cppcheck (http://cppcheck.sourceforge.net/)
