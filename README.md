@@ -1,4 +1,4 @@
-Algorithm-Practice-LinkedList
+Linked List (C++)
 =============================
 [![Build Status](https://travis-ci.org/cotrpepe/practice-cpp-linkedlist.svg?branch=master)](https://travis-ci.org/cotrpepe/practice-cpp-linkedlist)
 
