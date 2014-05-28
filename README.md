@@ -1,6 +1,6 @@
 Algorithm-Practice-LinkedList
 =============================
-[![Build Status](https://travis-ci.org/cotrpepe/Algorithm-Practice-LinkedList.svg?branch=master)](https://travis-ci.org/cotrpepe/Algorithm-Practice-LinkedList)
+[![Build Status](https://travis-ci.org/cotrpepe/practice-cpp-linkedlist.svg?branch=master)](https://travis-ci.org/cotrpepe/practice-cpp-linkedlist)
 
 This project is for my study.
 
