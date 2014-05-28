@@ -4,7 +4,7 @@ Linked List (C++)
 
 This project is for my study.
 
-## Build
+## How to Build
 
 1. $ make
 2. $ ./test
