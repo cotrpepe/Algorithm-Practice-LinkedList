@@ -2,7 +2,7 @@ Linked List (C++)
 =============================
 [![Build Status](https://travis-ci.org/cotrpepe/practice-cpp-linkedlist.svg?branch=master)](https://travis-ci.org/cotrpepe/practice-cpp-linkedlist)
 
-This project is for my study.
+This is a sample project for my study.
 
 ## How to Build
 
